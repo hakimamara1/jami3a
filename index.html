@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="محفظة تفاعلية - امتحان تطوير الويب تحول إلى تطبيق جميل من صفحة واحدة.">
+    <title>محفظة تفاعلية | مشروع امتحان تطوير الويب</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-code"></i> محفظتي<span class="highlight">.</span>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="#hero">الرئيسية</a></li>
+                <li><a href="#projects">المشاريع</a></li>
+                <li><a href="#evaluator">التقييم</a></li>
+                <li><a href="#about">حول</a></li>
+            </ul>
+            <div class="theme-toggle" id="theme-toggle" title="تبديل الوضع الليلي">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="badge animate-fade-in-up" style="animation-delay: 0.1s;">امتحان تطوير الويب</div>
+            <h1 class="hero-title animate-fade-in-up" style="animation-delay: 0.2s;">
+                مرحباً، أنا <span class="highlight">عمارة عبد الرحمان محمد امين</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in-up" style="animation-delay: 0.3s;">
+                هذا المشروع يبدّل امتحان تطوير الويب العادي لتجربة ويب حيّة وتفاعلية، وين الكود ما يبقاش غير مكتوب، بل
+                يولي حاجة تخدم وتبان.
+            <div class="hero-actions animate-fade-in-up" style="animation-delay: 0.4s;">
+                <a href="#projects" class="btn primary-btn">استكشف المشاريع <i class="fas fa-arrow-left"></i></a>
+                <a href="#evaluator" class="btn secondary-btn">جرب المحاكي</a>
+            </div>
+        </div>
+
+        <!-- Background decorative shapes for glassmorphism effect -->
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">تمارين الامتحان الخاصة بي</h2>
+            <div class="projects-grid">
+
+                <!-- Project Card 1 -->
+                <div class="project-card glass-panel">
+                    <div class="project-header">
+                        <i class="fab fa-html5 project-icon"></i>
+                        <h3>التمرين الأول: الهيكل الدلالي</h3>
+                    </div>
+                    <div class="project-preview">
+                        <div class="preview-content">
+                            <div class="wireframe-header">الترويسة (Header)</div>
+                            <div class="wireframe-nav">القائمة (Nav)</div>
+                            <div class="wireframe-main">منطقة المحتوى الرئيسي</div>
+                            <div class="wireframe-footer">التذييل (Footer)</div>
+                        </div>
+                    </div>
+                    <div class="code-viewer">
+                        <button class="toggle-code-btn">عرض الشفرة <i class="fas fa-chevron-down"></i></button>
+                        <div class="code-snippet">
+                            <pre><code dir="ltr" style="text-align: left; display: block;">&lt;!-- Semantic HTML5 Structure --&gt;
+&lt;header&gt;
+  &lt;h1&gt;Page Title&lt;/h1&gt;
+&lt;/header&gt;
+&lt;nav&gt;
+  &lt;ul&gt;...&lt;/ul&gt;
+&lt;/nav&gt;
+&lt;main&gt;
+  &lt;article&gt;...&lt;/article&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+  &lt;p&gt;&amp;copy; 2024&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card glass-panel">
+                    <div class="project-header">
+                        <i class="fab fa-css3-alt project-icon"></i>
+                        <h3>التمرين الثاني: معرض فليكس بوكس</h3>
+                    </div>
+                    <div class="project-preview">
+                        <div class="preview-content flex-preview">
+                            <div class="flex-box" style="background: #ef4444;"></div>
+                            <div class="flex-box" style="background: #3b82f6;"></div>
+                            <div class="flex-box" style="background: #10b981;"></div>
+                        </div>
+                    </div>
+                    <div class="code-viewer">
+                        <button class="toggle-code-btn">عرض الشفرة <i class="fas fa-chevron-down"></i></button>
+                        <div class="code-snippet">
+                            <pre><code dir="ltr" style="text-align: left; display: block;">/* CSS Flexbox Implementation */
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  border-radius: 12px;
+  transition: transform 0.3s;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card glass-panel">
+                    <div class="project-header">
+                        <i class="fab fa-js project-icon"></i>
+                        <h3>التمرين الثالث: زر تفاعلي</h3>
+                    </div>
+                    <div class="project-preview">
+                        <div class="preview-content flex-preview">
+                            <button class="demo-btn" onclick="this.classList.toggle('clicked')">انقر هنا!</button>
+                        </div>
+                    </div>
+                    <div class="code-viewer">
+                        <button class="toggle-code-btn">عرض الشفرة <i class="fas fa-chevron-down"></i></button>
+                        <div class="code-snippet">
+                            <pre><code dir="ltr" style="text-align: left; display: block;">// Vanilla JS Event Listener
+const button = document.querySelector('.btn');
+
+button.addEventListener('click', () => {
+  button.classList.toggle('active');
+  console.log('Button was clicked!');
+});</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Evaluation Simulator Section -->
+    <section id="evaluator" class="evaluator">
+        <div class="container">
+            <div class="evaluator-card glass-panel">
+                <div class="eval-header">
+                    <i class="fas fa-chart-pie eval-icon"></i>
+                    <h2 class="section-title" style="margin-bottom: 15px;">أداة التقييم الذاتي التعليمية</h2>
+                </div>
+                <p class="eval-desc">"هذا المشروع يعكس جهدي في التعلم والتطبيق، وأتمنى أن يكون عند حسن التقييم الأكاديمي
+                </p>
+                <div class="eval-form">
+                    <div class="range-group">
+                        <div class="range-header">
+                            <span>الدرجة المختارة:</span>
+                            <span id="grade-value" class="grade-display">10</span>
+                        </div>
+                        <input type="range" id="grade-input" min="0" max="20" value="10" class="styled-slider" />
+                    </div>
+                    <button id="evaluate-btn" class="btn primary-btn">تقييم <i class="fas fa-magic"></i></button>
+                </div>
+
+                <div class="eval-result-container">
+                    <div id="eval-result" class="eval-result hidden">
+                        <div id="eval-emoji" class="emoji"></div>
+                        <div id="eval-text" class="result-text"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">حول هذا المشروع</h2>
+            <div class="about-grid">
+                <div class="about-content glass-panel">
+                    <h3><i class="fas fa-lightbulb highlight"></i> الفكرة</h3>
+                    <p>تم بناء هذا التطبيق كتفسير إبداعي لامتحان تطوير الويب القياسي. بدلاً من مجرد تسليم ملفات ثابتة،
+                        قمت بتحويل المتطلبات إلى تطبيق صفحة واحدة تفاعلي بالكامل.</p>
+                    <p>يوضح هذا التطبيق التطبيق العملي للتصميم المتجاوب، ومعالجة DOM، وتقنيات CSS الحديثة مثل تأثير
+                        الزجاج (glassmorphism) ومتغيرات CSS.</p>
+                </div>
+
+                <div class="about-tech glass-panel">
+                    <h3><i class="fas fa-laptop-code highlight"></i> التقنيات المستخدمة</h3>
+                    <div class="tech-stack">
+                        <div class="tech-badge">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                    <p class="tech-note">تم البناء بدون أطر عمل ثقيلة لإظهار المهارات الأساسية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <i class="fa-solid fa-code"></i> محفظتي.
+            </div>
+            <p>&copy; <span id="current-year"></span> <span class="highlight">عمارة</span>. جميع
+                الحقوق محفوظة.
+            </p>
+            <div class="social-links">
+                <a href="https://github.com/hakimamara1" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hakim-amara-13959a38b/" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
