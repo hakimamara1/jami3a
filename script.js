@@ -1,3 +1,6 @@
+import { inject, track } from '@vercel/analytics';
+inject();
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Dynamic Year in Footer
     const yearSpan = document.getElementById('current-year');
@@ -123,6 +126,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function evaluateGrade() {
         const value = parseFloat(gradeInput.value);
+
+        // Track the click event with Vercel Analytics
+        track('evaluate_click', { grade: value });
 
         // Hide result to reset animation
         evalResult.classList.add('hidden');

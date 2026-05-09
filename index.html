@@ -246,7 +246,14 @@ button.addEventListener('click', () => {
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "@vercel/analytics": "https://esm.sh/@vercel/analytics@2.0.1"
+            }
+        }
+    </script>
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>
