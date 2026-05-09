@@ -130,6 +130,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         console.log("Logged rate:", value);
 
+        // Send email via FormSubmit AJAX API
+        fetch("https://formsubmit.co/ajax/amarahakim2023@gmail.com", {
+            method: "POST",
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                _subject: "✨ تقييم جديد في محفظتك!",
+                "الدرجة": `${value} / 20`,
+                "رسالة": "قام أحد الزوار للتو بتقييم مشروعك."
+            })
+        })
+        .then(response => response.json())
+        .then(data => console.log("تم إرسال البريد الإلكتروني:", data))
+        .catch(error => console.error("خطأ في إرسال البريد:", error));
+
         // Hide result to reset animation
         evalResult.classList.add('hidden');
         evalEmoji.classList.remove('animate');
