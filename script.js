@@ -129,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Track the click event with Vercel Analytics
         track('evaluate_click', { grade: value });
+        console.log("Logged rate:", value);
 
         // Hide result to reset animation
         evalResult.classList.add('hidden');
